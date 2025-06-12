@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>praticals on javascript </title>
+</head>
+<body>
+
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, blanditiis.</p>
+        <button onclick="fun()">sign up</button>
+    </div>
+   
+    <script>
+        //  <!-- variables in javascript -->
+        var a=3;
+        var a=100;
+        a=20;
+        document.write(a+"<br>");
+
+        let b=40;
+        b=300;
+        document.write(b +"<br>");
+
+        const d=500;
+        document.write(d +"<br>");
+
+        console.log(d);
+
+    </script>
+
+    <script>
+        
+        // statement in javascript
+      var key=30;
+      var dog=5;
+      if (dog<=key) {
+          document.write("yes" + "<br>");
+          
+      }
+       
+       var abc=45;
+       var bbc=34;
+       if (abc==bbc) {
+           document.write("win"+ "<br>");
+           
+       } else {
+           document.write("lost"+ "<br>");
+           
+       }
+
+    //    using ternary statement
+    var t=200;
+    var h= 400;
+    var ff;
+    t==h ? (ff="boy"): (ff="girl");
+    document.write(ff +"<br>");
+
+    // switch statement
+    var hope=200;
+    switch (hope) {
+        case 200:
+        document.write("today is sunny" + "<br>");
+            break;
+        case 20:
+        document.write("today is hot" + "<br>");
+            break;
+        case 10:
+        document.write("today is raining" + "<br>");
+            break;
+
+    
+        default:
+        document.write("not a good reply" + "<br>")
+            break;
+    }
+
+    var a=30;
+    document.write(typeof a + "<br>");
+
+    var g="my name is kosisochukwu";
+    document.write(typeof g + "<br>");
+
+    var r=[20,30,40,50];
+    document.write(typeof r + "<br>");
+
+    var o=[lastname="ejiogu", firstname="clinton", age="24"];
+    document.write(typeof o + "<br>");
+
+    // prompt
+    var a= confirm("Are you there?");
+    if (a){
+        alert("thanks");
+    } else{
+        alert("its okay buddy");
+    }
+    var a= prompt("what is your age");
+
+    // using function 
+     function cbbd( fname="kosi", lname="ejiogu") {
+         document.write("hello" +" "+lname+" "+fname +"<br>");
+         
+     }
+     cbbd();
+
+    function add1(maths,chem,phy,eng) {
+      var j= maths+chem+phy+eng;
+      return j
+         
+     }
+     var sum=add1(20,30,20,12);
+     document.write(sum +"<br>");
+
+    function per(total) {
+     var b= total/300*100;
+     document.write(b +"<br>");
+         
+     }
+     per(sum);
+
+    //  events in javascript 
+
+    function fun() {
+        document.write("Dont trust anybody"+"<br>");
+        
+    }
+    fun();
+
+    // loops in javascript
+
+    var l=5; 
+    while (l<=20) {
+        document.write (l + "hello"+"<br>");
+        l++;
+        
+    }
+
+
+    for ( var q=1; q <=20;  q++) {
+      document.write(q +"for hello"+"<br>");
+        
+    }
+
+    // nested loop 
+    for( var s=2; s<=20; s++){
+        for( var w=5; w<=s+10; w++){
+            document.write(w +"<br>");
+        }
+        document.write("hello");
+    }
+    </script>
+
+    <script>
+        
+    </script>
+    
+</body>
+</html>

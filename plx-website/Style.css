@@ -1,0 +1,115 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #2E0854;
+}
+/* 
+.center-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #2E0854;
+  color: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  font-size: 18px;
+  box-shadow: 0px 0px 20px 1px black;
+} */
+.center-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #2E0854;
+  color: white;
+  padding: 10px 50px;
+  border-radius: 10px;
+  font-size: 18px;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px 1px black;
+  position: relative;
+  
+}
+.center-box h1{
+  text-align: center;
+  font-size: 30px;
+  font-family: Sans-Serif;
+  margin-top: 20px;
+  
+}
+.layout{
+  padding-top:20px;
+}
+.layout input{
+  padding: 10px;
+  border-radius: 5px;
+  width:200px;
+  border: none;
+  margin-bottom: 10px;
+  background-color: #f4f4f4;
+}
+.layout button{
+  padding: 10px;
+  border-radius: 5px;
+  width:150px;
+  border: none;
+  text-align: center;
+  display: block;
+  margin: 20px auto;
+  margin-top: 5px;
+  background-color: darkblue;
+  color: white;
+}
+/* 
+.center-box2{
+  background-color: white;
+  border-radius: 60% / 10%;
+  transform: translatey(-180px); transition: .8s ease-in-out;
+  height: 300px;
+} */
+.center-box2 {
+  position: absolute;
+  bottom: -300px; /* Start mostly hidden */
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-radius: 60% / 10%;
+  color: darkblue;
+  transition: bottom  0.5s ease;
+  cursor: pointer;
+  z-index: 2;
+
+  padding: 10px 50px;
+  box-sizing: border-box;
+  height: 100%; /* Fixed height, less than full box */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+
+.center-box2 h1{
+  text-align: center;
+  font-size: 30px;
+  font-family: Sans-Serif;
+  color: darkblue;
+}
+.signup-section {
+  position: relative;
+  z-index: 1;
+}
+/* When checkbox is checked, slide up login form */
+#toggle-login:checked ~ .center-box .center-box2 {
+  bottom: 0;
+}
+
