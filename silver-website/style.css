@@ -1,0 +1,1072 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+.navi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    position: fixed; /* changed from absolute to fixed */
+    top: 0;
+    left: 0;
+    background: transparent; /* keep this if you want it transparent */
+    z-index: 1000;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+
+/* New container inside nav */
+.nav-con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* or 90% */
+    margin: 0 auto; /* center the nav content */
+    width: 98%;
+    gap: 2rem;
+    flex-wrap: wrap;
+    border-bottom:1px solid #ffffff;
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+   
+}
+
+.logo{
+    margin-right: 2rem;
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+}
+
+.logo a{
+    /* color: dodgerblue; */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 2rem;
+}
+.logo span{
+    color:dodgerblue;
+}
+
+.links{
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+}
+
+.links li{
+    padding: 0 5px;
+}
+
+.links a{
+    text-decoration: none;
+    color:white;
+    font-size: 18px;
+    transition: all ease.4s;
+}
+.links a:hover{
+    color: dodgerblue;
+}
+
+/* for scroll nav bar */
+.navi.scrolled {
+    background-color: white;
+    padding: 0; /* reduce height */
+    box-shadow:none; /* optional shadow */
+}
+
+.navi.scrolled .logo a {
+    color: dodgerblue;
+}
+
+.navi.scrolled .links a {
+    color: black;
+}
+
+.navi.scrolled #dropdown span {
+    background-color: black;
+}
+
+
+.navi.scrolled .links a:hover {
+    color: dodgerblue;
+}
+
+.nav-con {
+    transition: padding 0.3s ease;
+}
+.navi.scrolled .nav-con {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+
+.hero{
+    background-image: url(backimg/studio2.jfif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    position: relative;
+    opacity: 1 !important;
+    transform: none !important;
+  
+
+}
+
+/* Blur black overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+    backdrop-filter: blur(2px); /* applies blur */
+    z-index: 1;
+}
+
+
+.hero-text {
+    position: relative; /* So it sits above the blurred overlay */
+    z-index: 2;          /* Higher than the overlay */
+    text-align: center;  /* Center the text horizontally */
+    width: 40%;    /* Optional: limits width for better layout */
+    padding: 4rem 1rem 0;     /* Prevent text from touching edges on small screens */
+    
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.hero-text a {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.5rem 1.2rem;
+    background-color: dodgerblue;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.hero-text a:hover {
+    background-color: #000000;
+}
+
+/* about us  */
+.aboutus{
+    padding:4rem 2rem;
+    background-color:white; 
+}
+
+.aboutus h2{
+    text-align: center;
+    color:dodgerblue;
+    font-size: 2.5rem;
+}
+
+.about-con{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:2rem;
+    margin-top: 30px;
+}
+
+
+.about-img,
+.about-text {
+    width: 48%; /* Make both sections take up equal width */
+    height: 400px; /* Same height for both image and text */
+}
+
+.about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image clarity without stretching */
+    object-position: center 20%; /* Optional: Center the image */
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 1rem;
+}
+
+.about-text p {
+    text-align: justify; /* Justify the text for better readability */
+    color:gray;
+}
+.about-text ul {
+    text-align: justify; /* Justify the text for better readability */
+    color:gray;
+    margin-top: 10px;
+}
+
+
+.slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    margin-top: 2rem;
+}
+
+.slider {
+    position: relative;
+    height: 100%;
+}
+
+.feat-con.active {
+    display: flex;
+}
+
+.features{
+    padding:4rem 2rem;
+    background-color:white; 
+}
+
+.features h2{
+    text-align: center;
+    color:dodgerblue;
+    font-size: 2.5rem;
+}
+
+.features p{
+    text-align: center;
+    color:gray;
+}
+
+.feat-con{
+    display: none;
+    transition: all 0.5s ease-in-out;
+    justify-content: space-between;
+    gap:2rem;
+    margin-top: 30px;
+}
+.feat-img,
+.feat-text{
+    width: 48%;
+    height: 400px; 
+}
+.feat-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image clarity without stretching */
+    object-position: center 20%;
+}
+
+.feat-text{
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.feat-text h3{
+    color: dodgerblue;
+    font-size: 2rem;
+    text-align: justify;
+}
+
+.feat-text p{
+    color: gray;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.feat-text a{
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.5rem 1.2rem;
+    background-color: dodgerblue;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.feat-text a:hover {
+    background-color: #000000;
+}
+
+/* Arrow Buttons */
+.nav-arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: dodgerblue;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    display: flex;
+    gap: 1rem;
+    z-index: 10;
+  }
+
+
+  .slider-btn {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+
+.team{
+    padding:4rem 2rem;
+    background-color:white; 
+}
+
+.team h2{
+    text-align: center;
+    color:dodgerblue;
+    font-size: 2.5rem;
+}
+
+.team p{
+    text-align: center;
+    color:gray;
+}
+
+.team-con{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,auto);
+    margin-top: 20px;
+
+}
+
+.teami img{
+    width: 100%;
+    height: 250px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures the image fits nicely without distortion */
+    display: block;
+    margin: 0 auto;
+    object-position: center 20%;
+    
+}
+.teami h3{
+    color: #333;
+}
+.teami span{
+    color:gray;
+}
+
+.teami {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .team-overlay {
+    position: absolute;
+    top: 0;
+    right: -100%; /* hidden by default */
+    width: 10%;
+    height: 84%;
+    background-color: dodgerblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    transition: right 0.4s ease;
+    z-index: 2;
+  }
+  
+  .teami:hover .team-overlay {
+    right: 0;
+  }
+  
+  .team-overlay a i {
+    font-size: 22px;
+    color: white;
+    transition: transform 0.3s ease;
+  }
+  
+  .team-overlay a:hover i {
+    transform: scale(1.3);
+  }
+  
+
+.protfolio{
+    padding:4rem 2rem;
+    background-color:white; 
+}
+
+.protfolio h2{
+    text-align: center;
+    color:dodgerblue;
+    font-size: 2.5rem;
+}
+
+.links2{
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 1rem;
+}
+
+.links2 li{
+    padding: 0 5px;
+}
+
+.links2 a{
+    text-decoration: none;
+    color:gray;
+    font-size: 18px;
+    transition: all ease.4s;
+}
+.links2 a:hover{
+    background-color: dodgerblue;
+    color: #ffffff;
+    border-radius: 2rem;
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+
+}
+
+.po-con{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: 250px; /* default row height */
+    margin-top: 20px;
+
+}
+
+.po-img {
+    height: 100%;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    opacity: 1;
+    transform: scale(1);
+    display: block;
+}
+
+.po-img.hide {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+    display: none; 
+}
+
+.po-img img{
+    width: 100%;
+    height: 100%; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures the image fits nicely without distortion */
+    display: block;
+    margin: 0 auto;
+    object-position: center 20%;
+    
+}
+
+
+#box5 {
+    grid-row: span 2; /* Adjust to the height you want */
+    grid-column: 1 / 2;
+}
+
+#box3 {
+    grid-row: span 2; /* Different height */
+    grid-column: 3 / 4;
+}
+
+#box6 {
+    grid-row: span 3; /* Different height */
+  
+}
+
+#box9 {
+    grid-row: span 2; /* Different height */
+  
+}
+
+.service{
+    padding:4rem 2rem;
+    background-color:white; 
+}
+
+#text{
+    text-align: center;
+    color:dodgerblue;
+    font-size: 2.5rem;
+}
+
+.sev-con{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,auto);
+    margin-top: 20px;
+
+}
+
+.sev-con p{
+    color: gray;
+}
+
+.sev-con h2{
+  color:#333;
+}
+
+.sev-con a{
+    text-decoration: none;
+    margin-top: 10px;
+    color: dodgerblue;
+}
+
+
+.sev img{
+    width:10%;
+
+}
+
+.testimo{
+    padding:4rem 2rem;
+    background-color:white; 
+}
+
+.testimo h2{
+    text-align: center;
+    color:dodgerblue;
+    font-size: 2.5rem;
+}
+
+.testmo {
+    max-width: 700px;        /* limit the width */
+    margin: 2rem auto 0;          /* center horizontally */
+    position: relative;
+    overflow: hidden;
+}
+
+.testmo p {
+    text-align: center;
+    color: gray;
+    font-style: italic;      /* italic text */
+    line-height: 1.6;        /* optional: improves readability */
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%; /* Assuming 3 slides */
+  }
+
+  .testimonial {
+    flex: 0 0 100%;
+  }
+ 
+  .prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: dodgerblue;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+
+.dots {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: dodgerblue;
+}
+
+.blog{
+    padding:4rem 2rem;
+    background-color:white; 
+}
+
+.blog h2{
+    text-align: center;
+    color:dodgerblue;
+    font-size: 2.5rem;
+}
+
+.blog-con{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin-top: 2rem;
+}
+
+
+.blog-tm{
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+
+}
+.blog-tm:hover {
+    transform: translateY(-5px);
+}
+
+.blog-tm img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;   
+    object-position: center 20%; 
+}
+
+
+.blog-tm h3 {
+    margin: 1rem 0 0.5rem;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.blog-tm p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.blog-tm a {
+    color: dodgerblue;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0 1rem 1rem;
+}
+
+.blog-tm a:hover {
+    text-decoration: underline;
+}
+
+.contact{
+    padding:4rem 2rem;
+    background-color:white; 
+}
+
+.contact h2{
+    text-align: center;
+    color:dodgerblue;
+    font-size: 2.5rem;
+}
+.cont-box{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin-top: 2rem;
+    color: #333;
+ 
+
+}
+
+.cont-box div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center contents horizontally */
+    justify-content: center; /* Center contents vertically */
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+
+.cont-box img {
+    width: 10%;
+    margin-bottom: 1rem;
+}
+
+
+
+.con-form {
+    text-align: left;
+    padding: 20px; /* Reduced padding for the contact form to make it stand out */
+    margin: 0 auto; /* Center the form horizontally */
+    background-color: #f8f8f8; /* Optional: Adds a light background to the form */
+    border-radius: 10px; /* Optional: Add a subtle rounded border for style */
+    width: 90%; /* Ensure the form takes up full width */
+    margin-top:10px;
+}
+
+.con-form h3 {
+    font-size: 1.5rem; /* Increased font size for the form heading */
+    color: dodgerblue; /* Matching color with the contact heading */
+    margin-bottom: 15px; /* Adds space below the form heading */
+}
+
+.con-form form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    color:#333;
+}
+
+.name-row {
+    display: flex;
+    gap: 15px; /* Gap between first and last name fields */
+    width: 100%; /* Ensure name row takes up the full width of the form */
+}
+.input-group{
+    width: 100%;
+}
+
+.con-form input {
+    padding: 8px; /* Increased padding for better input size */
+    margin-bottom: 10px;
+    border-radius: 50px; /* Rounded corners */
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+.con-form button{
+    margin-top: 1.5rem;
+    padding: 0.4rem 0.8rem;
+    background-color: dodgerblue;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+    border: none;
+    width: 20%;
+}
+
+
+.con-form button:hover{
+    background-color: #000000;
+}
+
+.con-form textarea {
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 150px; /* You can adjust this to make it taller or shorter */
+    box-sizing: border-box;
+    font-size: 1rem;
+    resize: vertical; /* Allow vertical resize only */
+}
+
+footer {
+    background-color: #0d1b2a;
+    color: #ffffff;
+    padding: 3rem 2rem 1rem;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-container > div {
+    flex: 1 1 250px;
+  }
+  
+  .footer-links h4,
+  .footer-contact h4,
+  .footer-socials h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #00b4d8;
+  }
+  
+  .footer-links ul,
+  .footer-contact ul,
+  .footer-socials ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li,
+  .footer-contact li,
+  .footer-socials li {
+    margin-bottom: 0.8rem;
+  }
+  
+  .footer-links a,
+  .footer-socials a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover,
+  .footer-socials a:hover {
+    color: #00b4d8;
+    text-decoration: underline;
+  }
+  
+  .footer-contact li {
+    line-height: 1.6;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #1e2d3d;
+    font-size: 0.9rem;
+    color: #cccccc;
+  }
+  
+ /* this is for responsiveness  */
+ #dropdown{
+     display:none;
+     cursor: pointer;
+ }
+ #dropdown span{
+   display: block;
+   width: 25px;
+   height: 3px;
+   background:#fff;
+   margin: 5px 0;
+}
+
+#dropdown-menu{
+    display: none;
+}
+
+/* section fade in */
+
+section:not(.hero) {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  
+
+
+   
+
+  @media screen and (max-width: 1145px) {
+    #dropdown { display: block; }
+    .links    { display: none; }
+
+    /* hidden by default, off‑canvas to the left */
+/* Base sidebar (hidden off to the left) */
+
+  
+#dropdown-menu {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Hidden off-screen to the right */
+    width: 250px;
+    height: 80%;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+    z-index: 1000;
+    transition: right 0.3s ease; /* Smooth slide-in effect */
+}
+
+#dropdown-menu ul {
+    list-style: none;
+    padding: 2rem 1rem;
+    margin: 0;
+  }
+
+  #dropdown-menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: block;
+    padding-bottom: 1.5rem;
+  }
+
+#dropdown-menu ul {
+    margin-bottom: 1.5rem;
+  }
+
+  #dropdown-menu ul li a:hover {
+    color: #00b4d8;
+  }
+
+  /* Make the dropdown menu visible when active */
+  #dropdown-menu.active {
+    display: block;
+    right: 0;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1100;
+}
+ 
+   /* Responsive at 720px and below */
+@media screen and (max-width: 720px) {
+    /* ---- NAVIGATION ---- */
+  
+  
+    /* ---- HERO ---- */
+    .hero-text {
+      width: 90%;
+      padding: 2rem 1rem;
+    }
+  
+    /* ---- ABOUT US ---- */
+    .about-con {
+      flex-direction: column;
+    }
+    .about-img,
+    .about-text {
+      width: 100%;
+      height: auto;
+    }
+  
+    /* ---- FEATURES ---- */
+    .feat-con {
+      flex-direction: column;
+    }
+    .feat-img,
+    .feat-text {
+      width: 100%;
+      height: auto;
+    }
+  
+    /* ---- TEAM ---- */
+    .team-con {
+      grid-template-columns: 1fr;
+    }
+  
+    /* ---- PORTFOLIO ---- */
+    .po-con {
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: auto;
+    }
+  
+    /* ---- SERVICES ---- */
+    .sev-con {
+      grid-template-columns: 1fr;
+    }
+  
+    /* ---- BLOG ---- */
+    .blog-con {
+      grid-template-columns: 1fr;
+    }
+  
+    /* ---- CONTACT BOXES ---- */
+    .cont-box {
+      grid-template-columns: 1fr;
+    }
+  
+    /* ---- CONTACT FORM BUTTON FULL WIDTH ---- */
+    .con-form button {
+      width: 100%;
+    }
+  
+   /* ---- FOOTER: two columns ---- */
+   .footer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .footer-container > div {
+    flex: none;
+  }
+  }
+   
+  @media screen and (min-width: 720px) and (max-width: 952px) {
+    /* TEAM: 2 columns */
+    .team-con {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    /* PORTFOLIO: 3 columns, no spans */
+    .po-con {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: auto;
+      gap: 1rem;
+    }
+  
+    /* Cancel any manual row/column spans */
+    #box3,
+    #box5,
+    #box6,
+    #box9 {
+      grid-row: auto !important;
+      grid-column: auto !important;
+    }
+  }
+
+  section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
